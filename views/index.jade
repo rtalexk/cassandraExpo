@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    main
+        section.left
+            .header
+                .menu
+                    i.fa.fa-navicon.fa-lg
+                .search
+                    input(type="text", placeholder="Search")
+            .item
+                .photo
+                .info
+                    .author
+                        p.name Botas
+                        if comments.length > 0
+                            - var date = new Date(comments[comments.length-1].date)
+                            p.hour #{date.getHours() + ':' + date.getMinutes()}
+                    .preview
+                        if comments.length > 0
+                            - var txt = comments[comments.length-1].message
+                            p #{txt}
+        section.right
+            .header
+                .user
+                    p.name Alejandro Rivera
+                    p.online online
+                .icons
+                    .searchIcon.icon
+                        i.fa.fa-search.fa-lg
+                    .menuIcon.icon
+                        i.fa.fa-ellipsis-v.fa-lg
+
+            .messageContent
+                each item in comments
+                    .messageText.long
+                        p #{item.message}
+            .newMessage
+                .file.icon
+                    i.fa.fa-paperclip.fa-lg
+                .text
+                    form(name="newComment", method="post", action="/")
+                        input#new(type="text", name="message", placeholder="Write a message...")
+                        .send.icon.hidden
+                            button#btnSubmit(type="submit", style="display:none;")
+                            i.fa.fa-telegram.fa-lg
+                .emotic.icon
+                    i.fa.fa-smile-o.fa-lg
+                .voice.icon
+                    i.fa.fa-microphone.fa-lg

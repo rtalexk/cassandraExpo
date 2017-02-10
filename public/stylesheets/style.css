@@ -1,0 +1,234 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-color: #999;
+  font-family:sans-serif;
+}
+
+main {
+  width: 800px;
+  height: 80vh;
+  margin: 4em auto;
+  display: flex;
+  background-color: #fff;
+}
+
+.left {
+  width: 35%;
+  height: 100%;
+}
+
+.left .header {
+  height: 40px;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header .menu {
+  height: 100%;
+  width: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #777;
+}
+
+.search input {
+  border: 0 solid #eee;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  padding: 5px;
+}
+
+.left .item {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content:space-between;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #419FD9;
+  color: white;
+}
+
+.item .photo {
+  width: 20%;
+  border-radius: 50%;
+  height: 100%;
+  background-color: red;
+  margin-right:10px;
+}
+
+.item .info {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  padding:10px 0 5px 0;
+  box-sizing: border-box;
+}
+
+.info .author {
+  display: flex;
+  justify-content: space-around;
+  font-size:12px;
+  line-height: 100%;
+  height: 50%;
+}
+
+.author .name {
+  font-weight:600;
+  width: 50%;
+}
+
+.author .hour {
+  width: 50%;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.info .preview {
+  font-size:12px;
+  line-height: 100%;
+  height: 50%;
+}
+
+.info .preview::before {
+  content: "You: ";
+}
+
+.info .preview p {
+  display: inline-block;
+}
+
+.right {
+  width: 65%;
+  height: 100%;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+}
+
+.right .header {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 8px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.user .online {
+  color: #00B7FF;
+  font-weight: 100;
+  text-space: 2px;
+  letter-spacing: 1px;
+  font-size:12px;
+  font-family: "DejaVu Sans Light", sans-serif;
+}
+
+.header .icons {
+  display: flex;
+  justify-content: center;
+}
+
+.header .icon {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 5px;
+  padding:5px;
+  color: #999;
+}
+
+.messageContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: auto;
+}
+
+.messageContent .messageText {
+  align-self: center;
+  width: 80%;
+  height: 50px;
+  background-color: lightsteelblue;
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.messageText p {
+}
+
+.newMessage {
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.newMessage form {
+  display: inline-block;
+  width: 100%;
+}
+
+.newMessage .icon {
+  width: 50px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  color: #999;
+  position: relative;
+}
+
+.send button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+
+.newMessage .text {
+  width: 100%;
+  height: 100%;
+}
+
+.text input {
+  width: 100%;
+  height: 100%;
+  border:0 solid;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
